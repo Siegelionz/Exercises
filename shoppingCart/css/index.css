@@ -1,0 +1,590 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+div.nav{
+	width:101px;
+	height:101px;
+	position:fixed;
+	z-index:10;
+	right:2%;
+	top:10%;
+}
+div.down{
+	width: 174px;
+	height: 64px;
+	position:fixed;
+	z-index:10;
+	bottom:9%;
+	right:2%;
+	animation:down 1s linear forwards alternate infinite;
+}
+@keyframes down{
+	from{
+		bottom:9%;
+	}
+	to{
+		bottom:6%;
+	}
+}
+/* 第一屏============================================start */
+#fullpage div.screen01{
+	width: 100%;
+	height: 100%;
+	position:relative;
+	background:url('../img/01-bg.png') no-repeat bottom;
+}
+#fullpage div.screen01 div.goods{
+	position:absolute;
+	left:50%;
+	transform:translate(-50%);
+	top:40%;
+
+}
+#fullpage div.screen01 div.sofa{
+	position:absolute;
+	left:47%;
+	margin-left:-220px;
+	top:22%;
+}
+#fullpage div.class div.screen01 div.sofa{
+	animation:screen01_sofa 0.5s linear forwards infinite alternate;
+}
+@keyframes screen01_sofa{
+	from{
+		top:22%;
+	}
+	to{
+		top:18%;
+	}
+}
+#fullpage div.screen01 div.fly{
+	width: 470px;
+	height: 50px;
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%) translateY(-250px);
+	bottom:50%;
+	animation:fly 2s linear infinite alternate ;
+}
+@keyframes fly{
+	from{
+		transform:translateX(-50%) translateY(-250px);
+	}
+	to{
+		transform:translateX(-50%) translateY(-200px);
+	}
+}
+/* 第一屏============================================end */
+
+/* 第二屏============================================start */
+#fullpage div.screen02{
+	width: 100%;
+	height: 100%;
+	position:relative;
+	background:url('../img/02-bg.png') no-repeat bottom;
+}
+#fullpage div.screen02 div.search{
+	position:absolute;
+	left:50%;
+	top:45%;
+	margin-left:350px;
+	opacity:0;
+	transform-origin:right top;
+	transform:scale(1);
+	transition:all 1s linear;
+
+}
+#fullpage div.class div.screen02 div.search{
+	margin-left:-90px;
+	opacity:1;
+}
+#fullpage div.class div.screen02 div.search.animation{
+	animation:screen02_search 1s linear forwards;
+}
+@keyframes screen02_search{
+	from{
+		margin-left:-90px;
+		transform:scale(1);
+		top:45%;
+	}
+	to{
+		margin-left:60px;
+		top:25%;
+		transform:scale(0.7);
+	}
+}
+#fullpage div.screen02 div.search img.key{
+	position:absolute;
+	left:76px;
+	top:6px;
+	display:none;
+}
+#fullpage div.screen02 div.goods{
+	position:absolute;
+	left:50%;
+	transform-origin:right bottom;
+	transform:translate(-50%) scale(0);
+	top:50%;
+	margin-top:-100px;
+}
+#fullpage div.screen02 div.goods.animation{
+	animation:screen02_goods 1s linear forwards;
+}
+@keyframes screen02_goods{
+	from{
+		transform:translate(-50%) scale(0);
+	}
+	to{
+		transform:translate(-50%) scale(1);
+	}
+}
+#fullpage div.screen02 div.sofa{
+	width: 207px;
+	height: 166px;
+	position:absolute;
+	left:50%;
+	bottom:50%;
+	margin-left:-160px;
+	margin-bottom:-31px;
+	transform:scale(0.5);
+	opacity:0;
+}
+#fullpage div.screen02 div.sofa.animation{
+	animation:screen02_sofa 2s linear forwards ;
+}
+@keyframes screen02_sofa{
+	from{
+		margin-left:-160px;
+		margin-bottom:-31px;
+		transform:scale(0.5);
+		opacity:1;
+	}
+	to{
+		margin-left:-230px;
+		margin-bottom:-700px;
+		transform:scale(1);
+		opacity:1;
+		z-index:10;
+	}
+}
+/* 第二屏============================================end */
+
+/* 第三屏============================================start*/
+#fullpage div.screen03{
+	width: 100%;
+	height: 100%;
+	position:relative;
+	background:url('../img/03-bg.png') no-repeat bottom;
+}
+#fullpage div.screen03 img{
+	position:absolute;
+}
+#fullpage div.screen03 div.val{
+	position:absolute;
+	width:296px;
+	height: 131px;
+	left:50%;
+	margin-left:40px;
+	bottom:50%;
+	margin-bottom:-140px;
+}
+#fullpage div.screen03 div.val img:last-child{
+	display:none;
+}
+#fullpage div.screen03 div.btn{
+	position:absolute;
+	width: 218px;
+	height: 58px;
+	left:50%;
+	margin-left:40px;
+	bottom:50%;
+	margin-bottom:-222px;
+}
+#fullpage div.screen03 div.btn img:last-child{
+	display:none;
+}
+#fullpage div.screen03 div.sofa{
+	width:204px;
+	height: 198px;
+	position:absolute;
+	left:50%;
+	bottom:50%;
+	margin-left:-225px;
+	margin-bottom:-85px;
+	z-index:10;
+	opacity:0;
+}
+#fullpage div.screen03 div.sofa.animation{
+	animation:screen03to04_sofa 1.5s linear;
+}
+@keyframes screen03to04_sofa{
+	from{
+		margin-left:-225px;
+		margin-bottom:-85px;
+		z-index:10;
+		opacity:1;
+	}
+	to{
+		margin-left:-60px;
+		margin-bottom:-744px;
+		z-index:10;
+		opacity:1;
+	}
+}
+/* 第三屏============================================end */
+
+/* 第四屏============================================start */
+#fullpage div.screen04{
+	width: 100%;
+	height: 100%;
+	position:relative;
+	background:url('../img/04-bg.png') no-repeat bottom;
+}
+#fullpage div.screen04 img{
+	position:absolute;
+}
+#fullpage div.screen04 div.cloud{
+	width: 882px;
+	height: 120px;
+	position:absolute;
+	left:0px;
+}
+#fullpage div.screen04 div.cloud.animation{
+	animation:screen04_cloud 3s linear forwards infinite alternate;
+}
+@keyframes screen04_cloud{
+	from{
+		left:0px;
+	}
+	to{
+		left:660px;
+	}
+}
+#fullpage div.screen04 div.text{
+	width: 429px;
+	height: 32px;
+	position:absolute;
+	left:50%;
+	transform:translate(-50%);
+	bottom:50%;
+	margin-bottom:165px;
+}
+#fullpage div.screen04 div.text img:last-child{
+	display:none;
+}
+#fullpage div.screen04 div.card{
+	width: 283px;
+	height: 270px;
+	position:absolute;
+	left:50%;
+	transform:translate(-50%);
+	bottom:50%;
+	margin-bottom:-110px;
+	display:none;
+}
+#fullpage div.screen04 div.card img.news{
+	width: 173px;
+	height: 47px;
+	position:absolute;
+	top:55px;
+	left:35px;
+	display:none;
+}
+#fullpage div.screen04 div.shoppcar{
+	width: 407px;
+	height: 346px;
+	position:absolute;
+	left:50%;
+	transform:translate(-50%);
+	bottom:0px;
+	z-index:11;
+	transition:all 0.5s linear;
+}
+#fullpage div.class div.screen04 div.shoppcar{
+	left:50%;
+	transform:translate(700px);
+}
+#fullpage div.screen04 div.shoppcar img.sofa{
+	width:204px;
+	height: 198px;
+	position:absolute;
+	top:-62px;
+	left:143px;
+	display:none;
+}
+/* 第四屏============================================end */
+
+/* 第五屏============================================start */
+#fullpage div.screen05{
+	width: 100%;
+	height: 100%;
+	position:relative;
+	background:url('../img/05-bg.png');
+}
+#fullpage div.screen05 div.text{
+	width: 541px;
+	height: 56px;
+	position:absolute;
+	left:50%;
+	margin-left:-550px;
+	top:66px;
+}
+#fullpage div.screen05 div.card{
+	width:358px;
+	height: 221px;
+	position:absolute;
+	left:50%;
+	margin-left: -485px;
+	top:200px;
+}
+#fullpage div.screen05 div.card img.order{
+	left:50%;
+	transform:translate(-50%);
+	top:0px;
+	transition:top 1s 2.2s linear;
+}
+#fullpage div.class div.screen05 div.card img.order{
+	top:-50px;
+}
+#fullpage div.screen05 div.card img.sofa{
+	left:50%;
+	transform:translate(-50%);
+	/* bottom:-150px; */
+	bottom:500px;
+	opacity:0;
+}
+#fullpage div.screen05 div.card img.sofa.animation{
+	animation:screen05_sofa 2s  linear forwards;
+}
+@keyframes screen05_sofa{
+	from{
+		bottom:500px;
+		opacity:1;
+	}
+	50%{
+		bottom:0px;
+		opacity:1;
+	}
+	to{
+		bottom:-150px;
+		opacity:1;
+	}
+}
+#fullpage div.screen05 div.card img{
+	position:absolute;
+}
+#fullpage div.screen05 div.mouse{
+	height:100%;
+	width:205px;
+	position:absolute;
+	left:50%;
+	margin-left:122px;
+	overflow:hidden;
+}
+#fullpage div.screen05 div.mouse img.mouse01,img.mouse02{
+	bottom:200px;
+	left:23px;
+}
+#fullpage div.screen05 div.mouse img.mouse02{
+	display:none;
+}
+#fullpage div.screen05 img.hand{
+	bottom:-450px;
+}
+#fullpage div.class div.screen05 img.hand{
+	animation:screen05_hand 1s linear forwards;
+}
+@keyframes screen05_hand{
+	from{
+		bottom:-450px;
+	}
+	to{
+		bottom:0px;
+	}
+}
+#fullpage div.screen05 div.mouse img{
+	position:absolute;
+}
+
+/* 第五屏============================================end */
+
+
+/* 第六屏============================================start */
+#fullpage div.srceen06{
+	width: 100%;
+	height: 100%;
+	position:relative;
+	background:url('../img/06-bg.png') no-repeat center;
+}
+#fullpage div.srceen06.animation{
+	animation:srceen06 1s forwards linear;
+}
+@keyframes srceen06{
+	from{
+		
+	}
+	to{
+		background-position:right;
+	}
+}
+#fullpage div.srceen06 img.cloud1,img.cloud2{
+	position:absolute;
+	left:0px;
+}
+#fullpage div.srceen06 img.cloud1.animation{
+	animation:srceen06_cloud1 4s linear forwards infinite alternate;
+}
+@keyframes srceen06_cloud1{
+	from{
+		left:0px;
+	}
+	to{
+		left:500px;
+	}
+}
+#fullpage div.srceen06 img.cloud2.animation{
+	animation:srceen06_cloud1 5s linear forwards infinite alternate;
+}
+@keyframes srceen06_cloud2{
+	from{
+		left:0px;
+	}
+	to{
+		left:700px;
+	}
+}
+#fullpage div.srceen06 div.sofa{
+	width:204px;
+	height:198px;
+	position:absolute;
+	transform:scale(1);
+	top:-300px;
+	left:200px;
+	opacity:0;
+}
+#fullpage div.srceen06 div.sofa.animation{
+	animation:srceen06_sofa 1s linear alternate;
+}
+@keyframes srceen06_sofa{
+	from{
+		transform:scale(1);
+		top:-300px;
+		opacity:1;
+	}
+	to{
+		top:50px;
+		transform:scale(0.3);
+		opacity:1;
+	}
+}
+#fullpage div.srceen06 div.box{
+	width: 123px;
+	height: 85px;
+	position:absolute;
+	top:100px;
+	/* left:50%; */
+	/* margin-left:-440px; */
+	left:-200px;
+	transform:scale(0.9);
+	transition:all 1s linear;
+}
+#fullpage div.srceen06 div.box.animation{
+	animation:srceen06_box 1s linear forwards;
+}
+@keyframes srceen06_box{
+	from{
+		left:-200px;
+	}
+	to{
+		left:50%;
+		margin-left:-440px;
+	}
+}
+#fullpage div.srceen06 div.box.animation.down{
+	animation:srceen06_box_down 1s linear;
+}
+@keyframes srceen06_box_down{
+	from{
+		top:100px;
+		left:50%;
+		margin-left:-440px;
+	}
+	to{
+		top:500px;
+		left:50%;
+		margin-left:-440px;
+	}
+}
+#fullpage div.srceen06 div.car{
+	width: 221px;
+	height: 122px;
+	position:absolute;
+	bottom:0px;
+	left:50%;
+	margin-left:-450px;
+}
+#fullpage div.srceen06 div.car img{
+	position:absolute;
+}
+#fullpage div.srceen06 div.car img.buyer,img.address{
+	right:-35px;
+	top:-60px;
+}
+#fullpage div.srceen06 div.car img.address,img.say,img.door{
+	display:none;
+}
+#fullpage div.srceen06 div.car img.worker{
+	top:-200px;
+	left:0px;
+	transform-origin:left bottom;
+	transform:scale(0);
+}
+#fullpage div.srceen06 div.car img.worker.animation{
+	animation:srceen06_worker 1s 1s linear forwards;
+}
+@keyframes srceen06_worker{
+	from{
+		top:-200px;
+		left:0px;
+		transform:scale(0);
+	}
+	to{
+		top:-313px;
+		left:222px;
+		transform:scale(1);
+	}
+}
+#fullpage div.srceen06 div.car img.say{
+	width: 139px;
+	height: 173px;
+	position:absolute;
+	top:-450px;
+	left:360px;
+}
+#fullpage div.srceen06 div.car img.door{
+	top:-162px;
+	left:742px;
+}
+#fullpage div.srceen06 div.car img.person{
+	top:-300px;
+	left:742px;
+	transform-origin:right bottom;
+	transform:scale(0);
+}
+#fullpage div.srceen06 div.car img.person.animation{
+	animation:srceen06_person 1s 1s linear forwards;
+}
+@keyframes srceen06_person{
+	from{
+		top:-310px;
+		left:742px;
+		transform:scale(0);
+	}
+	to{
+		top:-310px;
+		left:600px;
+		transform:scale(1);
+	}
+}
+/* 第六屏============================================end */
