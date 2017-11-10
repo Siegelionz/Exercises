@@ -1,0 +1,572 @@
+
+/* -----顶部样式 strat--------*/
+
+#web-top{
+	background:rgb(28,102,253);
+}
+#web-top div.container{
+	position: relative;
+}
+#web-top div.container i{
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	color: #fff;
+	background: rgba(0,0,0,.6);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	text-align: center;
+	line-height: 20px; 
+}
+/* -----顶部样式 end--------*/
+
+/* ---- 菜单样式 strat--------*/
+
+#menu{
+	background:#e3e4e5;
+	height:30px;
+}
+#menu div.fl{
+	padding-left: 210px;
+	line-height: 30px;
+}
+#menu div.fl i{
+	color: #f10215;
+}
+#menu div.fr ul li{
+	float: left;
+	line-height: 30px;
+}
+#menu div.fr ul li a{
+	color: #999;
+}
+#menu div.fr ul li.line{
+	height:10px;
+	border-left: 1px solid #ccc;
+	margin:11px 12px 0px;
+}
+#menu div.fr ul li:last-child{
+	position: relative;
+}
+#menu div.fr ul li:last-child span{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	background: url(../img/ewm.png) no-repeat;
+	left: 50%;
+	margin-left: -30px;
+}
+#menu div.fr ul li:last-child i{
+	border:5px solid #e3e4e5;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left:-5px;
+	border-bottom: 5px solid #fff
+}
+/* -----菜单样式 end--------*/
+
+/* -----头部样式 strat--------*/
+/* ----左侧部分 strat---- */
+#header{
+	height: 140px;
+}
+#header div.fl{
+	position: relative;
+	width:190px;
+	height: 140px; 
+}
+#header div.fl a{
+	width:190px;
+	height: 170px;
+	background:#fff  url(../img/logo.png) no-repeat;
+	position: absolute;
+	top:-30px;
+	text-indent: -100px;
+	overflow: hidden;
+}
+/* ----左侧部分 end---- */
+
+/* ----右侧部分 strat---- */
+/* 搜索框 */
+#header div.fr{
+	width: 1000px;
+	height: 115px;
+	padding-top:25px ;
+}
+#header div.fr div.search{
+	width: 550px;
+	height: 35px;
+	margin-left: 130px;
+	float: left;
+	position: relative;
+}
+#header div.fr div.search input{
+	float: left;
+}
+#header div.fr div.search input[type=text]{
+	width: 493px;
+	height: 33px;
+	border:1px solid #f10215;
+	outline: none;
+	padding-left: 5px;
+}
+#header div.fr div.search input[type=button]{
+	width: 50px;
+	height: 35px;
+	border:0;
+	background: #f10215;
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+
+}
+#header div.fr div.search span{
+	width: 19px;
+	height: 15px;
+	background:url(../img/sprite-photo-search.png) no-repeat 0 0;
+	position: absolute;
+	right: 70px;
+	top:50%;
+	margin-top: -8px;
+}
+#header div.fr div.search span:hover{
+	background-position: -30px 0;
+}
+/* 购物车 */
+#header div.fr div.car{
+	width: 190px;
+	height: 35px;
+	border:1px solid #e3e4e5;
+	float: left;
+	margin-left: 30px;
+	line-height: 35px;
+	text-align: center;
+	color: #f10215;
+	position: relative; 
+}
+#header div.fr div.car a{
+	color: #f10215; 
+}
+#header div.fr div.car span{
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: #f10215;
+	position: absolute;
+	line-height: 14px;
+	color: #fff;
+}
+/* 热点 */
+#header div.fr div.hotwords{
+	width: 550px;
+	height: 30px;
+	float: left;
+	margin-left: 130px;
+}
+#header div.fr div.hotwords ul li{
+	float: left;
+	line-height: 30px;
+	margin-right: 10px;
+}
+#header div.fr div.hotwords ul li a{
+	color: #999;
+}
+#header div.fr div.hotwords ul li:first-child a{
+	color: #f10215;
+}
+#header div.fr div.hotwords ul li a:hover{
+	color: #f10215;
+}
+/* 导航 */
+#header div.fr div.nav{
+	width: 768px;
+	height: 30px;
+	float: left;
+	margin-top: 15px;
+	padding-left: 40px;
+
+}
+#header div.fr div.nav ul li{
+	float: left;
+	margin-right: 30px;
+}
+#header div.fr div.nav ul li.line{
+	height: 10px;
+	margin:8px 20px 0px 20px;
+	border-left: 1px solid #666;
+}
+#header div.fr div.nav ul li.end{
+	margin-right: 0px;
+}
+#header div.fr div.nav ul li a{
+	color: #555;
+	font-size: 17px;
+	font-weight: bold;
+}
+#header div.fr div.nav ul li a:hover{
+	color: #f10215; 
+}
+/* 领奖券 */
+#header div.fr div.money{
+	width: 190px;
+	height: 40px;
+	float: left;
+}
+/* ----右侧部分 strat---- */
+
+/* -----头部样式 end--------*/
+
+/* -----主体内容样式 strat--------*/
+#main {
+	height: 480px;
+}
+#main div.content-l{
+	width: 190px;
+	height: 480px;
+	background:#6e6568;
+	float: left;
+	position: relative;
+}
+#main div.content-l ul{
+	padding-top: 9px;
+}
+#main div.content-l ul li{
+	line-height: 29px;
+	padding-left: 12px;
+}
+#main div.content-l ul li:hover{
+	background: rgba(255,255,255,0.6);
+}
+#main div.content-l ul li a{
+	color: #fff;
+}
+#main div.content-l ul li a:hover{
+	color: #f10215;
+}
+#main div.content-l ul li span{
+	color: #fff;
+}
+#main div.content-l  div.box{
+	width: 200px;
+	height: 480px;
+	position: absolute;
+	top: 0px;
+	left: -200px;
+	background: url(../img/banner-aside.png) no-repeat;
+}
+#main div.content-l  div.box div.img{
+	width: 0px;
+	height: 480px;
+	background: #f00;
+	position: absolute;
+	left: 200px;
+	z-index: 2;
+	overflow: hidden;
+	transition: width 0.7s;
+}
+#main div.content-l  div.box:hover div.img{
+	width: 1000px;
+}
+#main div.content-m{
+	width: 790px;
+	height: 480px;
+	float: left;
+	margin:0px 10px;
+}
+#main div.content-m div.m-t{
+	height: 340px;
+	position: relative;
+}
+#main div.content-m div.m-t ul{
+	position: absolute;
+	bottom: 20px;
+	padding:5px 10px;
+	left: 50%;
+	margin-left: -101px;
+	background: rgba(255,255,255,.6);
+	border-radius: 10px;
+}
+#main div.content-m div.m-t ul li{
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	float: left;
+	background: #fff;
+}
+#main div.content-m div.m-t ul li:first-child{
+	background: #f10215;
+}
+#main div.content-m div.m-t ul li+li{
+	margin-left: 10px;
+}
+#main div.content-m div.m-t span{
+	width: 25px;
+	height: 50px;
+	position: absolute;
+	color: #fff;
+	font-size: 30px;
+	background: rgba(0,0,0,.7);
+	top:50%;
+	margin-top: -25px;
+	text-align: center;
+	line-height: 50px;
+}
+#main div.content-m div.m-t span.span-r{
+	right: 0px;
+}
+#main div.content-m div.m-b img{
+	margin-top:10px; 
+}
+#main div.content-r{
+	width: 190px;
+	height: 480px;
+	background: #fff;
+	float: left;
+}
+#main div.content-r div.top{
+	height:85px;
+	padding:15px;
+	position: relative;
+	border-bottom:1px solid #ccc;
+}
+#main div.content-r div.top div.head{
+	width: 40px;
+	height: 40px;
+	border:3px solid #d8be87;
+	border-radius: 50%;
+	padding:3px;
+	float: left;
+}
+#main div.content-r div.top div.dl{
+	float: right;
+}
+#main div.content-r div.top div.head img{
+	width: 40px;
+	width: 40px;
+	border-radius: 50%;
+}
+#main div.content-r div.top div.dl p{
+	line-height: 23px;
+}
+#main div.content-r div.top div.fl{
+	position: absolute;
+	bottom: 15px;
+}
+#main div.content-r div.top div.fl a{
+	width: 70px;
+	height: 20px;
+	border:2px solid #e01222;
+	margin-right: 10px;
+	display: inline-block;
+	color: #e01222;
+	text-align: center;
+	line-height: 20px;
+}
+#main div.content-r div.top div.fl a:hover{
+	background: #e01222;
+	color: #fff;
+}
+#main div.content-r div.middle{
+	padding:0px 13px 17px;
+}
+#main div.content-r div.middle div.m-top{
+	height:26px; 
+	border-bottom: 1px solid #e6e6e6;
+	margin-bottom: 10px;
+}
+#main div.content-r div.middle div.m-top ul li{
+	float: left;
+	line-height: 26px;
+}
+#main div.content-r div.middle div.m-top ul li a{
+	color: #666;
+	font-size: 14px;
+}
+#main div.content-r div.middle div.m-top li.line{
+	height:17px;
+	border-left: 1px solid  #ccc;
+	margin:5px 12px 0px;
+
+}
+#main div.content-r div.middle div.m-top li:last-child{
+	float: right;
+}
+#main div.content-r div.middle div.m-bottom li{
+	line-height: 25px;
+}
+#main div.content-r div.middle div.m-bottom li a{
+	color: #666;
+}
+#main div.content-r div.bottom{
+	position: relative;
+	height: 209px;
+	overflow: hidden;
+}
+#main div.content-r div.bottom ul{
+	position: absolute;
+	left: -2px;
+}
+#main div.content-r div.bottom li{
+	width: 47px;
+	height: 24px;
+	float: left;
+	text-align:center;
+	position: relative;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	padding-top: 45px;
+}
+#main div.content-r div.bottom li:first-child::after{
+	content:"减";
+	width: 15px;
+	height: 20px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: url(../img/sprite_index@1x.png) no-repeat -52px -20px;
+	background-size:109px 94px;
+}
+#main div.content-r div.bottom li a{
+	color: #666;
+}
+#main div.content-r div.bottom li a::before{
+	content: "";
+	width: 18px;
+	height: 20px;
+	position: absolute;
+	background: url(../img/sprite_fs@1x.png) no-repeat -3px -2px;
+	top: 15px;
+	left: 50%;
+	margin-left: -9px;
+}
+/* -----主体内容样式 end--------*/
+
+/* -----底部内容样式 strat--------*/
+#footer {
+	height: 500px;
+	background:#eaeaea;
+}
+#footer div.present{
+	height: 102px;
+	border-bottom: 1px solid #dedede;
+}
+#footer div.present div.container ul{
+	margin-left: 34px;
+}
+#footer div.present div.container ul li{
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+	position: relative;
+	line-height: 102px;
+	width: 253px;
+	padding-left: 45px;
+
+
+}
+#footer div.present div.container ul li:last-child{
+	width: 208px;
+}
+#footer div.present div.container ul li::before{
+	content: "";
+	width: 36px;
+	height: 42px;
+	position: absolute;
+	left: 0px;
+	top: 30px;
+	background: url(../img/ico_service.png) no-repeat ;
+
+}
+#footer div.present div.container ul li:nth-child(2)::before{
+	background-position: 0px -43px;
+}
+#footer div.present div.container ul li:nth-child(3)::before{
+	background-position: 0px -86px;
+}
+#footer div.present div.container ul li:nth-child(4)::before{
+	background-position: 0px bottom;
+}
+#footer div.help{
+	padding-top: 22px;
+
+}
+#footer div.help div.container{
+	border-bottom: 1px solid #dedede;
+	padding-bottom: 22px;
+}
+#footer div.help div.container dl{
+	float: left;
+	width: 198px;
+}
+#footer div.help div.container dt{
+	height: 28px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #777;
+}
+#footer div.help div.container dd{
+	height: 22px;
+}
+#footer div.help div.container dd a{
+	color: #666;
+}
+#footer div.help div.container dl:last-child {
+	width: 197px;
+	height: 151px;
+	background: url(../img/ico_footer.png) no-repeat;
+}
+#footer div.help div.container dl:last-child dt{
+	text-align: center;
+}
+#footer div.help div.container dl:last-child dd p{
+	width: 180px;
+	margin-left: 8px;
+}
+#footer div.help div.container dl:last-child dd a{
+	float: right;
+}
+#footer div.link div.container{
+	text-align: center;
+}
+#footer div.link div.container p{
+	height: 22px;
+}
+#footer div.link div.container p a{
+	color: #666;
+}
+#footer div.link div.container p:first-child{
+	height: 38px;
+	line-height: 38px;
+}
+#footer div.link div.container p:first-child span{
+	margin:0px 10px;
+}
+#footer div.link div.container p.icon{
+	margin-top: 15px;
+}
+#footer div.link div.container p.icon span{
+	width: 101px;
+	height: 31px;
+	display: inline-block;
+	margin-right: 10px;
+	background: url(../img/ico_footer.png) no-repeat -2px -153px;
+}
+#footer div.link div.container p.icon span:nth-child(2){
+	background-position: -1px -185px;
+}
+#footer div.link div.container p.icon span:nth-child(3){
+	background-position: -1px -219px;
+}
+
+#footer div.link div.container p.icon span:nth-child(4){
+	background-position: -106px -153px;
+}
+#footer div.link div.container p.icon span:nth-child(5){
+	background-position: -106px -218px;
+}
+#footer div.link div.container p.icon span:nth-child(6){
+	background-position: -106px -187px;
+}
+/* -----底部内容样式 end--------*/
