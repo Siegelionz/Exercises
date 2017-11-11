@@ -1,0 +1,561 @@
+/* ----------------头部样式 strat------------------- */
+body{
+	background: url(../img/wp.jpg) no-repeat  top;
+}
+#header{
+}
+#header div.content{
+	width: 1000px;
+	height: 340px;
+	margin:0px auto;
+	background: url(../img/m.jpg) no-repeat center top;
+	position: relative;
+}
+#header div.content dl{
+	float: left;
+	width: 90px;
+	text-align: center;
+}
+#header div.content dl a{
+	color: #fff;
+}
+#header div.content dl:hover{
+	background: url(../img/nav_hover.png) no-repeat;
+	height: 258px;
+}
+#header div.content dl  dd a:hover{
+	background: #1ba6b6;
+	height: 22px;
+	line-height: 22px;
+	display: inline-block;
+	padding:0px 4px;
+}
+#header div.content dl dt a{
+	font-size: 16px;
+	line-height: 61px;
+}
+#header div.content dl dd{
+	line-height: 23px;
+}
+#header div.content dl dd.dd-new{
+	position: relative;
+}
+#header div.content dl dd.dd-new span.new{
+	position: absolute;
+	width: 11px;
+	height: 11px;
+	background: url(../img/sp.png) no-repeat 0px -336px;
+	right: 0px;
+}
+#header div.content dl dd.dd-hot{
+	position: relative;
+}
+#header div.content dl dd.dd-hot span.hot{
+	position: absolute;
+	width: 11px;
+	height: 11px;
+	background: url(../img/sp.png) no-repeat -11px -336px;
+	right: 0px;
+}
+#header div.content div.c-left{
+	width: 385px;
+}
+#header div.content div.c-logo{
+	width: 248px;
+	height: 101px;
+	margin-top: 22px;
+	background: url(../img/logo.png) no-repeat;
+}
+#header div.content div.c-right{
+	width: 367px;
+}
+#header div.content a.box {
+	position: absolute;
+	width: 470px;
+	height: 108px;
+	left: 236px;
+	top: 195px;
+}
+/* ----------------头部样式 end------------------- */
+
+/* ----------------内容样式 strat------------------- */
+#content div.container{
+	background: url(../img/m.jpg) no-repeat center -340px;
+}
+/* -------------------广告内容 strat------------------- */
+
+/* ------------广告内容左侧 strat---------------- */
+#content div.container div.banner div.b-left{
+	width: 176px;
+	height: 260px;
+	margin-right: 24px;
+}
+#content div.container div.banner div.b-left div.b-l-top{
+	background: url(../img/flash_bg.jpg) no-repeat;
+	width: 176px;
+	height: 95px;
+	padding-top: 35px;
+	text-align: center;
+}
+#content div.container div.banner div.b-left div.b-l-top p:first-child a{
+	font-size: 30px;
+	color: #8a3f12;
+}
+#content div.container div.banner div.b-left div.b-l-top p:last-child a{
+	color: #fff;
+}
+#content div.container div.banner div.b-left div.b-l-bottom li{
+	float: left;
+	width: 86px;
+	height: 63px;
+	text-align: center;
+	border:1px solid;
+	border-color: #28395a #28395a #3a4c7b #3a4c7b;
+	background: url(../img/icons.png) 0px -263px;
+	position: relative;
+}
+#content div.container div.banner div.b-left div.b-l-bottom li:hover{
+	background-position: 0px -327px;
+}
+#content div.container div.banner div.b-left div.b-l-bottom li::before{
+	content: "";
+	width: 21px;
+	height: 23px;
+	position: absolute;
+	left: 50%;
+	margin-left: -10px;
+	background: url(../img/icons.png) no-repeat;
+	margin-top: 12px;
+}
+#content div.container div.banner div.b-left div.b-l-bottom li:first-child::before{
+	background-position: -1px 0px;
+}
+#content div.container div.banner div.b-left div.b-l-bottom li:nth-child(2)::before{
+	background-position: -25px 0px;
+}
+#content div.container div.banner div.b-left div.b-l-bottom li:nth-child(3)::before{
+	background-position: -2px -23px;
+}
+#content div.container div.banner div.b-left div.b-l-bottom li:nth-child(4)::before{
+	background-position: -26px -23px;
+}
+#content div.container div.banner div.b-left div.b-l-bottom li a{
+	color: #fff;
+	display: inline-block;
+	margin-top: 41px;
+}
+/* ------------广告内容左侧 end---------------- */
+
+/* ------------广告内容中间 strat---------------- */
+#content div.container div.banner div.b-middle{
+	width: 440px;
+	height: 260px;
+	position: relative;
+	background: url(../img/1504210649349666234.jpg);
+}
+#content div.container div.banner div.b-middle span{
+	width: 26px;
+	height: 26px;
+	background: #cc3a2a url(../img/sp.png) no-repeat -77px -429px;
+	position: absolute;
+	right: -27px;
+	bottom: 0px;
+}
+#content div.container div.banner div.b-middle div.menu{
+	position: absolute;
+	bottom: 0px;
+}
+#content div.container div.banner div.b-middle div.menu li{
+	float: left;
+	width: 110px;
+	height: 26px;
+	background: #000;
+	color: #707070;
+	text-align: center;
+	line-height: 26px;
+}
+#content div.container div.banner div.b-middle div.menu li:hover{
+	background: #ffb400;
+	cursor: pointer;
+}
+#content div.container div.banner div.b-middle div.menu li:first-child{
+	border: 0px;
+	background: #ffb400;
+}
+#content div.container div.banner div.b-middle div.menu li:last-child{
+	width: 107px;
+}
+#content div.container div.banner div.b-middle div.menu li+li{
+	border-left: 1px solid #707070;
+}
+#content div.container div.banner div.b-middle div.nav{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+#content div.container div.banner div.b-middle div.nav a{
+	display: inline-block;
+	padding:8px;
+	float: left;
+}
+#content div.container div.banner div.b-middle div.nav a:first-child{
+	background: #54c313;
+	color: #000;
+}
+#content div.container div.banner div.b-middle div.nav a:last-child{
+	background: #42454b;
+	color: #6d757e;
+}
+#content div.container div.banner div.b-middle div.nav a:hover{
+	background:#54c313;
+	color:#000;
+}
+/* ------------广告内容中间 end---------------- */
+
+/* ------------广告内容右侧 strat---------------- */
+#content div.container div.banner div.b-right{
+	width: 339px;
+	height: 260px;
+	border-left: 1px solid #707070;
+}
+#content div.container div.banner div.b-right div.b-r-top{
+	height: 30px;
+}
+#content div.container div.banner div.b-right div.b-r-top ul li{
+	float: left;
+	width: 68px;
+	height: 30px;
+	background: #36383e;
+	text-align: center;
+	line-height: 30px;
+}
+#content div.container div.banner div.b-right div.b-r-top ul li:hover {
+	background: #fff;
+}
+#content div.container div.banner div.b-right div.b-r-top ul li:hover a{
+	color: #008ec7;
+}
+#content div.container div.banner div.b-right div.b-r-top ul li:last-child{
+	width: 67px;
+}
+#content div.container div.banner div.b-right div.b-r-top ul li a{
+	color: #a1a9ab;
+}
+#content div.container div.banner div.b-right div.b-r-top ul li:nth-child(4){
+	background: #fff;
+}
+#content div.container div.banner div.b-right div.b-r-top ul li:nth-child(4) a{
+	color: #008ec7;
+}
+#content div.container div.banner div.b-right div.b-r-bottom{
+	height: 230px;
+	background: #fff;
+	padding:0px 15px;
+}
+#content div.container div.banner div.b-right div.b-r-bottom span a{
+	float: right;
+	color: #6283a0;
+}
+#content div.container div.banner div.b-right div.b-r-bottom dl dt{
+	color: #f00;
+	font-size: 16px;
+	text-align: center;
+	height: 45px;
+	line-height: 45px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 5px;
+}
+#content div.container div.banner div.b-right div.b-r-bottom dl dd{
+	height: 24px;
+	line-height: 25px;
+}
+#content div.container div.banner div.b-right div.b-r-bottom dl dd a{
+	float: left;
+	color: #666;
+}
+#content div.container div.banner div.b-right div.b-r-bottom dl dd a.icon{
+	width: 40px;
+	margin-right: 4px;
+}
+#content div.container div.banner div.b-right div.b-r-bottom dl dd a.content{
+	width: 220px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#content div.container div.banner div.b-right div.b-r-bottom dl dd a.content:hover{
+	color: #e14040;
+}
+#content div.container div.banner div.b-right div.b-r-bottom dl dd a:hover{
+
+}
+#content div.container div.banner div.b-right div.b-r-bottom dl dd span{
+	float: right;
+}
+/* ------------广告内容右侧 end---------------- */
+
+/* -------------------广告内容 end------------------- */
+
+/* --------------------主体内容 strat--------------- */
+#content div.container div.main{
+	margin-top: 30px;
+}
+/* ------------主体内容左侧 strat---------------- */
+#content div.container div.main div.m-left{
+	width: 176px;
+	height: 456px;
+	margin-right: 24px;
+}
+#content div.container div.main div.m-left div.nav-t{
+	width: 176px;
+	height: 37px;
+	line-height: 37px;
+	color:#fff;
+	font-size: 16px;
+}
+#content div.container div.main div.m-left div.nav-b li{
+	height: 53px;
+	background: #323648;
+	border-bottom: 1px solid #43485f;
+	border-top: 1px solid #272a38;
+	line-height: 53px;
+	position: relative;
+
+}
+#content div.container div.main div.m-left div.nav-b li a{
+	color: #c0c8da;
+	width: 134px;
+	position: relative;
+	display: inline-block;
+	padding:0px 17px 0px 25px;
+}
+#content div.container div.main div.m-left div.nav-b li a:after{
+	content: "";
+	width: 7px;
+	height:12px;
+	position: absolute;
+	right: 17px;
+	top: 50%;
+	margin-top: -6px;
+	background: url(../img/icons.png) no-repeat -3px -234px;
+}
+#content div.container div.main div.m-left div.nav-b li a i{
+	width: 18px;
+	height: 17px;
+	position: absolute;
+	background: url(../img/icons.png) no-repeat -28px -51px;
+	top: 50%;
+	margin-top: -8px;
+}
+#content div.container div.main div.m-left div.nav-b li:hover a i{
+	background-position: -4px -51px;
+}
+#content div.container div.main div.m-left div.nav-b li:hover a{
+	color: #fff;
+}
+#content div.container div.main div.m-left div.nav-b li:nth-child(2) a i{
+	background-position: -27px -75px;
+}
+#content div.container div.main div.m-left div.nav-b li:hover:nth-child(2) a i{
+	background-position: -4px -75px;
+}
+#content div.container div.main div.m-left div.nav-b li:nth-child(3) a i{
+	background-position: -27px -99px;
+}
+#content div.container div.main div.m-left div.nav-b li:hover:nth-child(3) a i{
+	background-position: -4px -99px;
+}
+#content div.container div.main div.m-left div.nav-b li:nth-child(4) a i{
+	background-position: -27px -123px;
+}
+#content div.container div.main div.m-left div.nav-b li:hover:nth-child(4) a i{
+	background-position: -4px -123px;
+}
+#content div.container div.main div.m-left div.nav-b li:nth-child(5) a i{
+	background-position: -27px -148px;
+}
+#content div.container div.main div.m-left div.nav-b li:hover:nth-child(5) a i{
+	background-position: -4px -148px;
+}
+#content div.container div.main div.m-left div.nav-b li:nth-child(6) a i{
+	background-position: -27px -171px;
+}
+#content div.container div.main div.m-left div.nav-b li:hover:nth-child(6) a i{
+	background-position: -4px -171px;
+}
+#content div.container div.main div.m-left div.nav-b li:nth-child(7) a i{
+	background-position: -27px -195px;
+}
+#content div.container div.main div.m-left div.nav-b li:hover:nth-child(7) a i{
+	background-position: -4px -195px;
+}
+#content div.container div.main div.m-left div.nav-b li a span{
+	margin-left: 31px;
+}
+#content div.container div.main div.m-left div.nav-b li:first-child{
+	border-top:0px;
+}
+#content div.container div.main div.m-left div.nav-b li:last-child{
+	border-bottom:0px;
+	height: 34px;
+}
+
+/* ------------主体内容左侧 end---------------- */
+
+/* ------------主体内容右侧 strat---------------- */
+
+#content div.container div.main div.m-right{
+	width: 780px;
+	height: 194px;
+}
+#content div.container div.main div.m-right div.activity-top span{
+	float: left;
+	color: #fff;
+	font-size: 16px;
+	line-height: 37px;
+}
+#content div.container div.main div.m-right div.activity-top a{
+	float: right;
+	color: #fff;
+	line-height: 37px;
+}
+#content div.container div.main div.m-right div.activity-bottom{
+	height: 157px;
+	margin-bottom: 31px;
+}
+#content div.container div.main div.m-right div.activity-bottom li{
+	float: left;
+	width: 258px;
+	height: 157px;
+}
+#content div.container div.main div.m-right div.activity-bottom li+li{
+	margin-left: 3px;
+}
+/* ----------九大职业  strat------------- */
+#content div.container div.main div.Kariera{
+	width: 778px;
+	height: 395px;
+}
+#content div.container div.main div.Kariera div.t-left{
+	width: 428px;
+}
+#content div.container div.main div.Kariera div.t-l-top{
+	height: 37px;
+	line-height: 37px;
+	color: #00537c;
+	font-size: 16px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom{
+	height: 358px;
+	background:#fff;
+	border:1px solid #e8e8ea;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li{
+	float: left;
+	width: 47px;
+	height: 29px;
+	background: #dfeaee;
+	position: relative;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:last-child{
+	width: 50px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li a {
+	width: 47px;
+	height: 29px;
+	display: inline-block;
+	position: relative;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li a span{
+	width: 20px;
+	height: 19px;
+	position: absolute;
+	left: 50%;
+	margin-left:-10px;
+	top: 50%;
+	margin-top: -9px;
+	background: url(../img/sp.png) no-repeat -14px -71px;
+	transition: all 0.6s;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:hover span{
+	background-position: -61px -71px
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:nth-child(2) span{
+	background-position: -14px -101px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:hover:nth-child(2) span{
+	background-position: -61px -101px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:nth-child(3) span{
+	background-position: -13px -131px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:hover:nth-child(3) span{
+	background-position: -61px -131px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:nth-child(4) span{
+	background-position: -13px -161px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:hover:nth-child(4) span{
+	background-position: -61px -161px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:nth-child(5) span{
+	background-position: -13px -190px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:hover:nth-child(5) span{
+	background-position: -61px -190px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:nth-child(6) span{
+	background-position: -13px -220px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:hover:nth-child(6) span{
+	background-position: -60px -220px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:nth-child(7) span{
+	background-position: -13px -250px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:hover:nth-child(7) span{
+	background-position: -60px -250px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:nth-child(8) span{
+	background-position: -13px -280px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:hover:nth-child(8) span{
+	background-position: -60px -280px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:nth-child(9) span{
+	background-position: -13px -310px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom li:hover:nth-child(9) span{
+	background-position: -60px -310px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom div.sword{
+	height: 330px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom div.sword div.sword-left{
+	width: 198px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom div.sword div.sword-right h2{
+	width: 220px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #f1f2f1;
+    font-size: 26px;
+    color: #e14040;
+    font-weight: normal;
+
+}
+#content div.container div.main div.Kariera div.t-l-bottom div.sword div.sword-right p{
+	line-height: 25px;
+	margin-top: 7px;
+}
+#content div.container div.main div.Kariera div.t-l-bottom div.sword div.sword-right{
+	width: 228px;
+}
+/* ----------九大职业  end------------- */
+/* ------------主体内容右侧 end---------------- */
+
+/* ------------主体内容 end------------------------- */
+
+
+
+/* ----------------内容样式 end------------------- */
