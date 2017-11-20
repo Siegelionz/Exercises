@@ -1,0 +1,376 @@
+@import './normalize';
+@import './reset';
+@import './setting';
+
+//导航头
+.navTop{
+    width: 100%;
+    height: @topHeight;
+    overflow: hidden;
+    border-bottom:1px solid @topBorderColor;
+    .navTop-container{
+        text-align: center;
+        width: @smallWidth;
+        height: 100%;
+        line-height: @topHeight;
+        .center-block();
+    }
+    li{
+        float: left;
+        border-right: 1px solid @topBorderColor;
+        &:last-child{
+            border-right:none;
+        }
+    }
+    .mobile{
+        width: @qrcodeWidth;
+    }
+    .time{
+        width: @serviceWidth;
+    }
+    .question{
+        width: @extraWidth;
+    }
+    .login{
+        width: @joinWidth;
+        .enroll{
+            color:@white;
+            background-color: @signupColor;
+            padding:5px 10px;
+            border-radius:@topRadius;
+            margin-right: 5px;
+        }
+    }
+}
+//导航
+.nav{
+    width: 100%;
+    overflow: hidden;
+    height: @navHeight;
+    border-bottom:1px solid @topBorderColor;
+    .nav-container{
+        width: @smallWidth;
+        height: 100%;
+        .center-block();
+    }
+    ul{
+        overflow: hidden;
+    }
+    li{
+        position: relative;
+        float: left;
+        font-size:14px;
+        text-align: center;
+        line-height: @navHeight;
+        padding:0px 15px;
+        &:last-child{
+            float:right;
+        }
+        &:hover a{
+            color:@navFontColorHover;
+        }
+        &:hover b{
+            opacity: 1;
+        }
+        a{
+            color: @navFontColor;
+        }
+        b{
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0px;
+            bottom:0px;
+            opacity: 0;
+            transition:all 0.8s;
+            background-color: @signupColor;
+        }
+    }
+    img{
+        width: @navImgWidth;
+        margin-top: @navImgTop;
+        margin-right:@logoRight;
+    }
+}
+//轮播图
+.swipe {
+    width: 100%;
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+    li{
+        width: 100%;
+    }
+    img{
+        width: 100%;
+        vertical-align: middle;
+    }
+  }
+
+  .swipe-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swipe-wrap>li {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+//专长
+.speciality{
+    max-width: @bigWidth;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+    dl{
+        width: 100%/3;
+        float: left;
+    }
+    dt{
+        font-size: 20px
+    }
+    dd{
+        font-size: 15px;
+        margin-top: 15px;
+        span{
+            font-size: 22px;
+            color: #999;
+            margin-right: 5px;
+        }
+    }
+}
+//通知
+.notice{
+    width: 100%;
+    overflow-x: hidden;
+    padding:15px 0px;
+    border-top: 1px solid @topBorderColor;
+    border-bottom: 1px solid @topBorderColor;
+    box-sizing: border-box;
+    .notice-container{
+        max-width: @bigWidth;
+        .center-block();
+    }
+    ul{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding:10px 0px;
+        box-sizing: border-box;
+    }
+    li{
+        font-size: 15px;
+        span{
+            color: @notifyColor;
+        }
+        b{
+            font-weight: normal;
+            color: @notifyqaColor;
+        }
+    }
+    li:last-child{
+        position: absolute;
+        top: 9px;
+        right:0px;
+        img{
+            height:@notifyImgHeight;
+        }
+    }
+    
+}
+//收益
+.income{
+    width: 100%;
+    overflow: hidden;
+    padding:10px 0px 20px 0px;
+    background-image: url('../img/box-style-bg.png');
+    .income-container{
+        max-width: @bigWidth;
+        .center-block();
+    }
+    .i-top{
+        width: 100%;
+        overflow: hidden;
+        height:@tabsHeight;
+        ul{
+            height: 50px;
+            overflow: auto;
+            border-bottom:1px solid @topBorderColor;
+        }
+        li{
+            float: left;
+            line-height: 50px;
+            padding:0px 20px;
+            font-size:16px;
+            position: relative;
+            &:hover b{
+                opacity: 1;
+            }
+            b{
+                position: absolute;
+                width:100%;
+                height: 2px;
+                left: 0px;
+                bottom:0px;
+                opacity:0;
+                background-color: #f00;
+                transition:all 0.9s;
+            }
+        }
+    }
+    .i-middle{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background-color:#fff;
+        margin-top: 10px;
+        box-shadow: 2px 2px 2px #aaa;
+        padding-left: 20px;
+        line-height: 40px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        i{
+            position: absolute;
+            left: 37px;
+            top:-20px;
+            border:10px solid transparent;
+            border-bottom:10px solid #fff;
+        }
+    }
+    .i-bottom{
+        width: 100%;
+        text-align: justify;
+        &:after{
+            content: '';
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .big{
+            font-size: 18px;
+        }
+        .small{
+            font-size:14px;
+        }
+        .false{
+            height: 148px;
+            width: 31.5%;
+            display: inline-block; 
+        }
+        .itme{
+            height: 148px;
+            width: 31.5%;
+            position: relative;
+            display: inline-block;
+            box-sizing:border-box;
+            padding-right:110px;
+            background-color: #fff;
+            border-radius:6px;
+            margin-bottom: 20px;
+            .item-left{
+                padding:15px 15px 0px;
+                box-sizing: border-box;
+                height: 100%;
+                width: 100%;
+            }
+            .item-right{
+                width: 110px;
+                height: 100%;
+                border-left: 1px dashed #aaa;
+                position: absolute;
+                top: 0px;
+                right:0px;
+                text-align: center;
+                h2{
+                    font-size: 35px;
+                    padding-top: 30px;
+                    margin-bottom: 10px;
+                    color: #f00;
+                }
+                small{
+                    font-size:10px;
+                }
+                b{
+                    color: rgba(43, 4, 43, 0.692);
+                    font-size: 14px;
+                }
+            }
+            dt{
+                font-weight:bold;
+                font-size:12px;
+                margin-bottom: 10px;
+            }
+            dd{
+                overflow: hidden;
+                margin-bottom: 10px;
+            }
+            .font{
+                padding-top: 10px;
+                .e{
+                    border:1px solid #399;
+                    color:#399;
+                }
+                .b{
+                    border: 1px solid #f56854;
+                    color: #f56854;
+                }
+            }
+        }
+    }
+}
+
+//媒体查询
+@media screen and (max-width:980px){
+    .mobile{
+        display: none;
+    }
+    .navTop{
+        .navTop-container{
+            width: 750px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+    .nav{
+        .nav-container{
+            width: 750px;
+            li:last-child{
+                display: none;
+            }
+        }
+    }
+    .speciality{
+        width:750px;
+        .center-block();
+    }
+    .notice{
+        width:750px;
+        .center-block();
+        li:last-child{
+            display: none;
+        }
+    }
+    .income{
+        .income-container{
+            width: @smallWidth;
+            .center-block();
+        }
+        .i-bottom{
+            .itme{
+                width: 48%;
+            }
+        }
+    }
+    
+}
