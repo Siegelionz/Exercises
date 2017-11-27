@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>传智音乐</title>
+    <link href="../public/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../public/vender/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/icon.css" />
+    <link href="../public/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../public/css/link.css" rel="stylesheet" type="text/css" />
+    <link href="../public/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="../public/vender/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="../public/vender/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="aw-top-menu-wrap">
+        <div class="container">
+            <!-- 用户栏 -->
+            <div class="aw-user-nav">
+                <a href="" class="aw-user-nav-dropdown">
+                </a>
+                <div class="aw-dropdown dropdown-list pull-right">
+                    <ul class="aw-dropdown-list">
+                        <li><a href="/logout"><i class="icon icon-logout"></i> 退出</a></li>
+                    </ul>
+                </div>
+                <!-- 登陆&注册栏 -->
+                <span>
+        <a class="register btn btn-normal btn-success" href="">注册</a>
+        <a class="login btn btn-normal btn-primary" href="">登录</a>
+      </span>
+                <!-- end 登陆&注册栏 -->
+            </div>
+            <!-- end 用户栏 -->
+        </div>
+    </div>
+    <div class="container">
+        <form id="form" method="post" action="/">
+            <div class="form-group">
+                <label for="">歌曲标题</label>
+                <input type="text" name="title" class="form-control" placeholder="请输入歌曲标题">
+            </div>
+            <div class="form-group">
+                <label for="">歌曲时长</label>
+                <input type="text" name="time" class="form-control" placeholder="请输入歌曲时长">
+            </div>
+            <div class="form-group">
+                <label for="">歌手</label>
+                <input type="text" name="singer" class="form-control" placeholder="请输入歌手姓名">
+            </div>
+            <div class="form-group">
+                <label for="">歌曲文件</label>
+                <input type="file" name="file">
+                <p class="help-block">请上传歌曲文件.</p>
+            </div>
+            <div class="form-group">
+                    <label for="">歌词文件</label>
+                    <input type="file" name="filelrc">
+                    <p class="help-block">请上传歌曲文件.</p>
+                </div>
+            <button type="submit" class="btn btn-success">点击添加</button>
+        </form>
+    </div>
+    <div class="aw-footer-wrap">
+        <div class="aw-footer">
+            Copyright © 2016, All Rights Reserved</span>
+            <span class="hidden-xs">Powered By <a href="http://www.itcast.cn" target="blank">ITcast</a></span>
+        </div>
+    </div>
+    <script>
+        //当点击form表单提交数据
+        $('#form').on('submit',function(e){
+            //接收数据
+            var inputs = $('input');
+            console.log(inputs);
+            //清除一下默认事件
+            e.preventDefault();
+            //创建formdata对象
+            var formData = new FormData();
+            formData.append('title',inputs[0].value);
+            formData.append('time',inputs[1].value);
+            formData.append('singer',inputs[2].value);
+            formData.append('file',inputs[3].files[0]);
+            formData.append('filelrc',inputs[4].files[0]);
+            //发起ajax请求
+            $.ajax({
+                type:'post',
+                url:'/api/add-music',
+                data:formData,
+                contentType:false, //默认加上键值对的头
+                processData:false,///转换你的数据
+                success:function(data){
+                    if(data.code == '001'){
+                        alert('添加音乐成功!即将跳转到您的首页')
+                        location.href = '/music/list-music';
+                    }
+                }
+            })
+            
+        })
+    </script>
+</body>
+
+</html>

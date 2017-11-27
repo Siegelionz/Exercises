@@ -1,0 +1,223 @@
+﻿<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>传智音乐</title>
+    <link href="/public/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/public/vender/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/public/css/icon.css" />
+    <link href="/public/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/public/css/link.css" rel="stylesheet" type="text/css" />
+    <link href="/public/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="/public/vender/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="/public/vender/bootstrap/dist/js/bootstrap.js"></script>
+
+     <style type="text/css">
+    #box {
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 300px;
+        height: 360px;
+        margin-top: 10px;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #box p {
+        padding: 0 15px;
+    }
+
+    #lrc {
+        margin-top: 130px;
+        position: absolute;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .gl {
+        color: hotpink;
+        background-color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="aw-top-menu-wrap">
+        <div class="container1">
+            <!-- 用户栏 -->
+            <div class="aw-user-nav">
+                <a href="" class="aw-user-nav-dropdown">
+                </a>
+                <div class="aw-dropdown dropdown-list pull-right">
+                    <ul class="aw-dropdown-list">
+                        <li><a href="/logout"><i class="icon icon-logout"></i> 退出</a></li>
+                    </ul>
+                </div>
+                <!-- 登陆&注册栏 -->
+                <span>
+        <a class="register btn btn-normal btn-success" href="">注册</a>
+        <a class="login btn btn-normal btn-primary" href="">登录</a>
+      </span>
+                <!-- end 登陆&注册栏 -->
+            </div>
+            <!-- end 用户栏 -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="page-header">
+            <h1>首页--<small>我的音乐</small></h1>
+        </div>
+        <a href="/music/add-music" class="btn btn-success">添加音乐</a>
+    </div>
+    <div class="container">
+       <div class="row" style="display: flex;">
+            <div style="flex: 3; margin-right: 10px;">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <th>编号</th>
+                        <th>歌曲标题</th>
+                        <th>歌手</th>
+                        <th>时长</th>
+                        <th>编辑</th>
+                        <th>删除</th>
+                        <th>播放</th>
+                    </thead>
+                    <tbody class="list_container" id="list_container">
+                        {{ each obj }}
+                        <tr>
+                            <td>1</td>
+                            <td>{{ $value.title }}</td>
+                            <td>{{ $value.singer }}</td>
+                            <td>{{ $value.time }}</td>
+                            <td><a href="/music/edit-music?id={{$value.id}}">编辑</a></td>
+                            <td><a data-id="{{ $value.id }}" class="del" href="javascript:;">删除</a></td>
+                            <td><span data-file="{{ $value.file }}" data-filelrc="{{ $value.filelrc }}" style="cursor:pointer" src="" class="glyphicon glyphicon-play-circle ply"></span></td>
+                        </tr>
+                        {{ /each }}
+                    </tbody>
+                </table>
+            </div>
+            <div style="flex: 2">
+                <p>正在播放音乐:</p>
+                <audio id="audio" autoplay src="" controls="controls">
+                </audio>
+                <div id="box" class="col-md-3">
+                    <div id="lrc">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aw-footer-wrap">
+        <div class="aw-footer">
+            Copyright © 2016, All Rights Reserved</span>
+            <span class="hidden-xs">Powered By <a href="http://www.itcast.cn" target="blank">ITcast</a></span>
+        </div>
+    </div>
+    <script>
+        //当我们点击播放按钮的时候 播放当前的歌曲
+        $('#list_container').on('click','span',function(){
+            // 当点击播放按钮时 获取当前的音乐路径以及歌词路径
+            var file = $(this).data('file');
+            var filelrc = $(this).data('filelrc');
+            //切割歌词
+            function strtoall(str){
+                //创建一个对象 来存放每一行的具体时间
+                var obj ={}
+                //接收歌词进行切割
+                var lines = str.split('\n');
+                //创建一个正则来获取每一行前面的时间
+                // [00:04.19]词：方文山
+                // /\[(\d{2})\:(\d{2})\.(\d{2})\](.*)/
+                var  regexp = /\[(\d{2})\:(\d{2})\.(\d{2})\](.*)/;
+                //遍历lines数组  
+                for(var i=0;i<lines.length;i++){
+                    //把每一行字符串都正则检测一下
+                    var result = regexp.exec(lines[i]);
+                    //有的歌词不符合条件就会返回null  我们continue一下
+                    if(!result) continue;
+                    //接下来 obj的key为歌曲分秒毫秒相加  value为歌词内容
+                    //分钟为乘以60转换为秒
+                    var minute = (result[1]-0) * 60 ;  //result[1]为字符串转变为数值 不然会出现字符串拼接
+                    var second = result[2]-0;
+                    //把毫秒转变为秒 然后四舍五入以便于计算总的秒数 
+                    var millisecond = Math.round(result[3]/100)  
+                    // 总的时间相加
+                    var time = minute+second+millisecond;
+                    // obj的key为时间 value为内容
+                    // result[4]为歌词内容
+                    obj[time] = result[4];     
+                    //返回这个对象
+                }
+                return obj; 
+            }
+            //动态生成dom对象
+            function dom(obj){
+                //创建一个字符串
+                var str = '';
+                //遍历这个对象
+                for(k in obj){
+                    //拼接字符串 创建多个p标签
+                    str+='<p time='+k+'>'+obj[k]+'</p>';
+                }
+                //添加到歌词框框中
+                $('#lrc').html(str);
+            }
+            //设置滚动效果
+            function scroll(obj){
+                //先获取到音频的当前播放时间
+                $('audio').on('timeupdate',function(e){
+                    //获取到时间四舍五入一下 避免出现小数
+                    var currenttime =Math.round(e.target.currentTime);
+                    //判断一下当前播放的时间在obj对象中是否可以找对应的内容 如果没有continue
+                    if(!obj[currenttime]) return;
+                    //获取一下当前播放段的p标签
+                    var p = $('#lrc').find('p[time='+currenttime+']');
+                    // console.log(p.offset().top);
+                    // console.log('-----------------------------------------')
+                    // console.log($('#lrc').offset().top);
+                    // 获取盒子的top以及p标签top之间的高度差
+                    var height = $('#lrc').offset().top - p.offset().top;
+                    //给当前的p加样式 它的其他同级清除class样式
+                    p.addClass('gl').siblings().removeClass('gl');
+                    //设置动画 让盒子改变
+                    $('#lrc').animate({top:height},1000);
+                    
+                })
+            }
+            //ajax请求 获取歌词文件
+            $.ajax({
+                type:'get',
+                url:filelrc,
+                success:function(str){
+                    //接收这个歌词切割  返回了对象我们应该用一个变量来接收一下 不然下一个函数会undefined
+                    var obj = strtoall(str);
+                    //接收歌词切割返回的对象 动态创建dom
+                    dom(obj);
+                    //随着歌曲变化歌词而变化
+                    scroll(obj);
+                    $('audio').attr('src',file);
+                }
+            })
+        })
+        //删除音乐
+        $('#list_container').on('click','.del',function(){
+            var delId = $(this).data('id');
+            //发起ajax请求
+            $.ajax({
+                type:'delete',
+                url:'/api/del-music',
+                data:delId,
+                dataType:'json',
+                success:function(data){
+                    if(data.code == '001'){
+                        console.log(data.mag);
+                    }else if(data.code == '002'){
+                        console.log(data.mag);
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
