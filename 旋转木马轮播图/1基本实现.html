@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>旋转木马轮播图</title>
+  <link rel="stylesheet" href="css/css.css"/>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <div class="slide" id="slide">
+    <ul>
+      <li><a href="#"><img src="images/slidepic1.jpg" alt=""/></a></li>
+      <li><a href="#"><img src="images/slidepic2.jpg" alt=""/></a></li>
+      <li><a href="#"><img src="images/slidepic3.jpg" alt=""/></a></li>
+      <li><a href="#"><img src="images/slidepic4.jpg" alt=""/></a></li>
+      <li><a href="#"><img src="images/slidepic5.jpg" alt=""/></a></li>
+    </ul>
+    <div class="arrow" id="arrow">
+      <a href="javascript:;" class="prev" id="arrLeft"></a>
+      <a href="javascript:;" class="next" id="arrRight"></a>
+    </div>
+  </div>
+</div>
+<script>
+  //标注了每个图片要运动到的位置
+  var config = [
+    {
+      width: 400,
+      top: 20,
+      left: 50,
+      opacity: 0.2,
+      zIndex: 2
+    },//0
+    {
+      width: 600,
+      top: 70,
+      left: 0,
+      opacity: 0.8,
+      zIndex: 3
+    },//1
+    {
+      width: 800,
+      top: 100,
+      left: 200,
+      opacity: 1,
+      zIndex: 4
+    },//2
+    {
+      width: 600,
+      top: 70,
+      left: 600,
+      opacity: 0.8,
+      zIndex: 3
+    },//3
+    {
+      width: 400,
+      top: 20,
+      left: 750,
+      opacity: 0.2,
+      zIndex: 2
+    },//4
+    
+  
+  ];//config其实就是一个配置单 规定了每张图片的大小位置层级透明度
+  //1 获取元素
+  var box = document.getElementById("wrap");
+  var slide = box.children[0];
+  var list = slide.children[0];
+  var lis = list.children;//要运动的li
+  var arrBox = slide.children[1];//箭头的父盒子
+  var arrLeft = arrBox.children[0];
+  var arrRight = arrBox.children[1];
+  
+  //2 设置每个li的默认显示位置
+fun();
+  
+  //3 设置移入移出箭头的渐入渐出效果
+  box.onmouseover=function(){
+    animate(arrBox,{
+      opacity:1
+    })
+  }
+  box.onmouseout=function(){
+    animate(arrBox,{
+      opacity:0
+    })
+  }
+  //4 右按钮点击操作
+  var flag=true;
+  arrRight.onclick = function () {
+    if(flag){
+      flag=false;
+      //将数组config中的第一个元素删除掉，并添加到config的最后
+      config.push(config.shift())
+      fun();
+    }
+  }
+    arrLeft.onclick = function () {
+      //将数组config中的第一个元素删除掉，并添加到config的最后
+      config.unshift(config.pop())
+      fun();
+
+    }
+  
+  function fun(){
+    for (var i = 0; i < config.length; i++) {
+      animate(lis[i], config[i],function(){
+        flag=true;
+      });
+
+    }
+
+  }
+
+  function animate(element, datas, fn) {
+  
+    clearInterval(element.timer);
+    element.timer = setInterval(function () {
+    
+      //1 设置假设条件：假设本轮定时器执行后可以进行清除
+      var flag = true;
+    
+      //先对获取到的数据进行遍历，对每一组数据进行相同操作即可
+      for (var k in datas) {
+        //针对透明度和层级进行单独处理
+        if (k == "opacity") {
+          var styleName = k;
+          var target = datas[k] * 100;
+        
+          //opacity是c3属性，使用getStyle获取后不会出现"auto"
+          //js中的小数进行加减计算会出现精度问题
+          var current = getStyle(element, styleName) * 100;
+          var step = (target - current) / 10;
+          step = step > 0 ? Math.ceil(step) : Math.floor(step);
+          current = current + step;
+          //设置透明度时，除以设置过的对应倍数
+          element.style[styleName] = current / 100;
+        
+          if (current != target) {
+            flag = false;
+          }
+        
+        } else if (k == "zIndex") {
+          //层级为整数值，所以不需要设置运动效果,直接设置为指定值即可
+          element.style.zIndex = datas[k];
+        } else {
+          //styleName： 实际上是k
+          //target： 实际上是obj[k]
+          var styleName = k;
+          var target = datas[k];
+        
+          //下面这段代码可以让某一个样式运动到指定的位置
+          var current = parseInt(getStyle(element, styleName)) || 0;
+          var step = (target - current) / 10;
+          step = step > 0 ? Math.ceil(step) : Math.floor(step);
+          current = current + step;
+          element.style[styleName] = current + "px";
+        
+          //此位置原来是书写清除定时器的代码位置，但是某个样式运动完毕并不能进行清除，其他样式可能没到，使用假设成立法解决
+          //2 找到假设失败的条件：如果某个样式运动时没有到达指定位置，阻止清除
+          if (current != target) {
+            flag = false;
+          }
+        }
+      }
+    
+      //需要整体检测，只有每个样式都到达了指定位置才可以设置清除
+      //3 验证flag的值
+      if (flag) {
+        clearInterval(element.timer);
+        if (typeof fn == "function") {
+          fn();
+        }
+      }
+    
+    }, 20);
+  }
+  function getStyle(element, styleName) {
+    //currentStyle   getComputedStyle
+    if (element.currentStyle) {
+      return element.currentStyle[styleName];
+    } else {
+      return getComputedStyle(element, null)[styleName];
+    }
+  }
+</script>
+</body>
+</html>
