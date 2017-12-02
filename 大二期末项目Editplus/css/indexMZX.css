@@ -1,0 +1,251 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+	color: #000
+}
+li{
+	list-style: none;
+}
+header{
+	width: 100%;
+	height: 135px;
+}
+header #logo{
+	width: 1100px;
+	height: 60px;
+	margin: 0px auto;
+}
+header #logo div.logo_1{
+	display:inline-block;
+}
+header #logo div.logo_1 img{
+	margin-top:30px ;
+}
+header #logo div.right{
+	float: right;
+	margin-top: 30px;
+}
+header #logo div.right a{
+	color: #000;
+}
+header #logo div.right div{
+	display: inline-block;
+}
+header #logo div.right span{
+	margin-right: 15px;
+	display: block;
+	float: left;
+	height: 33px;
+}
+header #logo div.right span a{
+	display: inline-block;
+}
+header #logo div.right button{
+	width: 50px;
+	height: 30px;
+}
+header #logo div.right div{
+	border: 1px solid #000;
+	border-radius: 19px;
+	width:200px ;
+	height: 22px;
+	margin: 0px 5px;
+}
+header #logo div.right div form input{
+	width: 150px;
+	height: 19px;
+	margin-left: 10px;
+	border: none;
+	padding-left: 2px;
+	outline: none;
+}
+header #logo div.right div form a{
+	width: 23px;
+	height: 18px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-image: url(../img/ss.png);
+}
+header #logo div.right p{
+	display: inline-block;
+	margin-left:11px ;
+	float: right;
+}
+header #logo div.right p .fudong{
+	position: relative;
+}
+header #logo div.right p .fudong:hover img.img{
+	display: block;
+}
+header #logo div.right .img{
+	position: absolute;
+	display: none;	
+}
+nav{
+	width: 1100px;
+	margin: 0px auto;
+	margin-top: 35px;
+	height: 40px;
+}
+nav ul .list{
+	float: left;
+	font-size: 18px;
+	width: 108px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	position: relative;
+}
+nav ul li.list:hover {
+	background-color: #ccc;
+}
+nav ul li.list a:hover{
+	color: #fff;
+}
+nav ul.ul li:hover{
+	background-color: #ddd;
+}
+nav ul.ul li a:hover{
+    color: #0168b7;
+}
+nav .ul{
+	position: absolute;
+	margin-top:0px ;
+	display: none;
+	width: 108px;
+	
+}
+nav .ul li{
+	float: none;
+	display: block;
+	width: 108px;
+}
+nav .ul li a{
+	color:#666;
+	font-size: 16px;
+	text-align: center;
+}
+nav  li.width{
+	width: 215px;;
+}
+nav li.list ul.ul_1{
+	position: absolute;
+	width: 108px;
+	left: 108px;
+	top: 0px;
+	display: none;
+}
+nav li.list ul.ul_2{
+	position: absolute;
+	width: 148px;
+	left: 108px;
+	top: 41px;
+	display: none;
+}
+nav li.list ul.ul_2 li{
+	width: 148px;
+}
+nav li.list ul.ul_3{
+	position: absolute;
+	width: 108px;
+	left: 108px;
+	top: 82px;
+	display: none;
+}
+nav li.list li:hover ul{
+	background-color:#f1f1f1 ;
+	display: block;
+}
+#aa{
+	width: 1100px;
+	height: auto;
+	
+	padding-left: 2%;
+	margin-left: 10%;
+}
+#bb{
+	width: 1100px;
+	height: auto;
+	margin-top: 20px;
+	
+}
+#bb p{
+	padding-left: 20px;
+}
+#cc{
+	width: 1100px;
+	height: auto;
+	margin-top: 20px;
+	
+}
+p{
+	padding-left: 20px;
+}
+#dd{
+	width: 1100px;
+	height: auto;
+	margin-top: 20px;
+
+}
+#ee{
+	width: 1100px;
+	height: auto;
+	margin-top: 3px;
+	padding-left: 2%;
+	
+	background-color: gold;
+	}
+	#tp {
+		margin-top: 3%;
+		
+		width: 360px;
+		float: left;
+		text-align: center;
+	}
+hr{
+	margin-top:40% ;
+}
+#zxb{
+	width: 1100px;
+	height: 100px;
+	margin: 0 auto;
+}
+#zi{
+	width: 1100px;
+	height: 50px;
+}
+#ztp{
+	width: 400px;
+	height: 55px;
+	margin: 0 auto;
+    
+}
+#jt{
+	width: 200px;
+	height: 20px;
+	text-align: center;
+	display: inline-block;
+	margin-top: 15px;
+}
+#cw{
+	width: 550px;
+	height: 20px;
+	display: inline-block;
+}
+#tb{
+	width: 232px;
+	height: 20px;
+	display: inline-block;
+	margin-left: 40px;
+	margin-top: 15px;
+	float: right;
+	margin-bottom: 5px;
+}
